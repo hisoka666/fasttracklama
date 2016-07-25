@@ -1,0 +1,67 @@
+application: suryasedanadb
+version: 1
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /static
+  static_dir: static
+  
+- url: /script/connection\.php
+  script: script/connection.php
+
+- url: /script/logscript\.php
+  script: script/logscript.php
+  
+- url: /script/mainscript\.php
+  script: script/mainscript.php
+  
+- url: /script/dataiki\.php
+  script: script/dataiki.php
+  
+- url: /script/list\.php
+  script: script/list.php
+
+- url: /script/listbulan\.php
+  script: script/listbulan.php
+  
+- url: /script/listbulanlalu\.php
+  script: script/listbulanlalu.php
+  
+- url: /script/tabeliki\.php
+  script: script/tabeliki.php
+
+- url: /script/tabelikibulanlalu\.php
+  script: script/tabelikibulanlalu.php
+  
+- url: /
+  script: index.php
+  
+- url: /signuppage\.html
+  script: /signuppage.html
+  
+- url: /main\.php
+  script: main.php
+  
+- url: /script/logout\.php
+  script: script/logout.php
+  
+- url: /script/checkuser\.php
+  script: script/checkuser.php
+  
+- url: /script/checkemail\.php
+  script: script/checkemail.php
+  
+- url: /script/datauser\.php
+  script: script/datauser.php
+  
+- url: /script/edit\.php
+  script: script/edit.php
+  
+- url: /script/hapus\.php
+  script: script/hapus.php
+
+env_variables:
+  MYSQL_DSN: mysql:unix_socket=/cloudsql/igdsanglah:us-central1:igdsanglah;dbname=fasttrack
+  MYSQL_USER: fasttrack
+  MYSQL_PASSWORD: ftpwd
